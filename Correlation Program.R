@@ -9,7 +9,7 @@ library(RColorBrewer)
 
 
 #Import Data
-Page15Data <- read_excel("/Users/tylergimple/Downloads/Shared With Tyler/Correlation Project/Base Data.xlsx")
+Page15Data <- read_excel("Base Data.xlsx")
 View(Page15Data)
 
 #Changing Row Names
@@ -24,6 +24,7 @@ View(Page15Data)
 library("Hmisc")  
 Hmisc.Correlation.Matrix <- rcorr(Data_File.M, type = "pearson")
 Significance <- Hmisc.Correlation.Matrix$P
+View(Hmisc.Correlation.Matrix$r)
 View(Significance)
 
 #Export Files
